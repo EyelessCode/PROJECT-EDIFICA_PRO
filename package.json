@@ -1,0 +1,27 @@
+{
+  "name": "project-edifica_pro",
+  "version": "1.0.0",
+  "description": "EdificaPro is a manage task project, when the worker is assigned task and the boss is the responsible",
+  "keywords": [
+    "manage",
+    "task",
+    "project",
+    "worker",
+    "boss"
+  ],
+  "homepage": "https://github.com/EyelessCode/PROJECT-EDIFICA_PRO#readme",
+  "bugs": {
+    "url": "https://github.com/EyelessCode/PROJECT-EDIFICA_PRO/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EyelessCode/PROJECT-EDIFICA_PRO.git"
+  },
+  "license": "ISC",
+  "author": "EyelessCode",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
