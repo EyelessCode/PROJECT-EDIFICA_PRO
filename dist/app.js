@@ -10,8 +10,8 @@ const app = (0, express_1.default)();
 const PORT = process.env.PORT || 4500;
 app.use(express_1.default.json());
 app.use((0, cors_1.default)());
-app.get("/test", (res) => {
-    res.send("Hello World");
+app.get('/test', (req, res) => {
+    res.send('Hello World');
 });
 app.listen(PORT, () => console.log(`LISTENING IN ${PORT} PORT!`));
 //# sourceMappingURL=app.js.map
