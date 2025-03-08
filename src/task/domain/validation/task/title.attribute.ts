@@ -3,6 +3,7 @@ export class TaskTitle{
 
     constructor(value:string){
         this.value=value
+        this.isEmpty()
     }
 
     public isEmpty(){
