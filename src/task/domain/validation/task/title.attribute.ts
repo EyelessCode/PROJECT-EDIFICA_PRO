@@ -6,7 +6,7 @@ export class TaskTitle{
         this.isEmpty()
     }
 
-    public isEmpty(){
+    private isEmpty(){
         if(this.value===''){
             throw new Error(`TaskTitle can't be empty`)
         }
