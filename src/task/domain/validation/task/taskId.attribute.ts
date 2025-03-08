@@ -5,7 +5,9 @@ export class TaskId{
         this.value=value
     }
 
-    public isNumber():boolean{
-        return typeof this.value === 'number'
+    public isNumber(){
+        if(typeof this.value !== 'number'){
+            throw new Error('TaskId must be a number')
+        }
     }
 }
