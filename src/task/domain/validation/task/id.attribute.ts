@@ -3,6 +3,7 @@ export class TaskId{
 
     constructor(value:number){
         this.value=value
+        this.isNumber()
     }
 
     public isNumber(){
