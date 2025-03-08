@@ -8,6 +8,7 @@ const PORT = process.env.PORT || 4500;
 app.use(express.json())
 app.use(cors())
 
+//? This is just a test
 app.get('/test', (req: Request, res: Response) => {
     res.send('Hello World');
 })
