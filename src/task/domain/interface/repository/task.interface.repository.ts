@@ -1,5 +1,5 @@
 import { TaskModel } from "../../model/task.model";
-import { TaskId } from "../../validation/task/id.attribute";
+import { TaskId } from "../../validation/id.attribute";
 
 export interface ITaskRepository {
     createTask(Task: TaskModel): Promise<void>
