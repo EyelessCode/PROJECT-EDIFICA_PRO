@@ -1,7 +1,7 @@
 import { TaskDeadline } from "../validation/deadline.attribute";
 import { TaskDescription } from "../validation/description.attribute";
 import { TaskId } from "../validation/id.attribute";
-import { TaskTitle } from "../validation/task/title.attribute";
+import { TaskTitle } from "../validation/title.attribute";
 
 export class TaskModel {
     id: TaskId;
