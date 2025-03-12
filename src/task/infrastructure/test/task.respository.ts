@@ -3,19 +3,19 @@ import { TaskModel } from "../../domain/model/task.model";
 import { TaskId } from "../../domain/validation/id.attribute";
 
 export class TaskRepository implements IServiceTask {
-    createTask(Task: TaskModel): Promise<void> {
+    async createTask(Task: TaskModel): Promise<void> {
         throw new Error("Method not implemented.");
     }
-    getTask(id: TaskId): Promise<TaskModel | null> {
+    async getTask(id: TaskId): Promise<TaskModel | null> {
         throw new Error("Method not implemented.");
     }
-    getAll(): Promise<TaskModel[]> {
+    async getAll(): Promise<TaskModel[]> {
         throw new Error("Method not implemented.");
     }
-    updateTask(task: TaskModel): Promise<void> {
+    async updateTask(task: TaskModel): Promise<void> {
         throw new Error("Method not implemented.");
     }
-    deleteTask(id: TaskId): Promise<void> {
+    async deleteTask(id: TaskId): Promise<void> {
         throw new Error("Method not implemented.");
     }
 
