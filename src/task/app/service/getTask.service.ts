@@ -6,7 +6,7 @@ import { TaskId } from "../../domain/validation/id.attribute";
 export class GetOneServiceTask {
     constructor(private readonly service: IServiceTask) { }
 
-    async getOneTask(id: number): Promise<TaskModel> {
+    async getOneTask(id: number): Promise<TaskModel | null> {
         const task = await this.service.getTask(new TaskId(id));
 
         if (!task) {
