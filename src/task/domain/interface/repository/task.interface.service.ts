@@ -5,6 +5,6 @@ export interface IServiceTask {
     createTask(Task: TaskModel): Promise<void>
     getTask(id: TaskId): Promise<TaskModel | null>
     getAll(): Promise<TaskModel[]>
-    updateTask(task: TaskModel, id: TaskId): Promise<void>
+    updateTask(task: TaskModel): Promise<void>
     deleteTask(id: TaskId): Promise<void>
 }
