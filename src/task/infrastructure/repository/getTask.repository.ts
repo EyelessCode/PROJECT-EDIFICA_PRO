@@ -2,7 +2,7 @@ import { PrismaClient } from "@prisma/client";
 import { TaskId } from "../../domain/validation/id.attribute";
 import { TaskModel } from "../../domain/model/task.model";
 import { TaskMapper } from "./mapper/taskModel.mapper";
-import { TaskNotCreated, TaskNotFoundError } from '../../domain/util/handleError.util';
+import { TaskNotFoundError } from '../../domain/util/handleError.util';
 
 export class GetOneRepositoryTask{
     constructor(private prisma:PrismaClient){}
@@ -22,7 +22,7 @@ export class GetOneRepositoryTask{
     
             return TaskMapper.toDomain(task);
         } catch (error) {
-            throw new TaskNotCreated(`Task with id ${id.value} not found`);
+            throw new TaskNotFoundError(`Task with id ${id.value} not found`);
         }
     }
 }
