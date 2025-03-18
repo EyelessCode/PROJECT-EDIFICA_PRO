@@ -1,14 +1,15 @@
-import { IServiceTask } from "../../domain/interface/repository/task.interface.service";
-import { TaskModel } from "../../domain/model/task.model";
-import { TaskId } from "../../domain/validation/id.attribute";
+import { IServiceTask } from "../../../domain/interface/repository/task.interface.service"
+import { TaskModel } from "../../../domain/model/task.model"
+import { TaskId } from "../../../domain/validation/id.attribute"
+
 
 export class TaskRepository implements IServiceTask {
     //? This repository is in memory activity. It's just a test
     private tasks: TaskModel[] = []
 
-    async createTask(Task: TaskModel): Promise<void> {
+    async createTask(task: TaskModel): Promise<void> {
         //// throw new Error("Method not implemented.");
-        this.tasks.push(Task)
+        this.tasks.push(task)
     }
 
     async getTask(id: TaskId): Promise<TaskModel | null> {
