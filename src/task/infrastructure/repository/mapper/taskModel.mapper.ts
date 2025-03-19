@@ -10,7 +10,7 @@ export class TaskMapper {
         return new TaskModel(
             new TaskId(task.id),
             new TaskTitle(task.title),
-            new TaskDescription(task.description),
+            new TaskDescription(task.description)||"",
             new TaskState(task.state),
             new TaskDeadline(task.deadline)
         );
