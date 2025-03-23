@@ -44,8 +44,5 @@
     "express": "^4.21.2",
     "pg": "^8.14.0",
     "prisma": "^6.4.1"
-  },
-  "prisma": {
-    "schema": "src/task/infrastructure/database/prisma/schema.prisma"
   }
 }
