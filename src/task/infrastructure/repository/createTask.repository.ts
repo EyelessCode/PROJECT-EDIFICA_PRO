@@ -12,9 +12,9 @@ export class CreateRepositoryTask{
             const object=TaskMapper.toPersistence(task)
             const taskToCreate=await this.prisma.task.create({
                 data:object
-                });
+            });
 
-                return TaskMapper.toDomain(taskToCreate)
+            return TaskMapper.toDomain(taskToCreate)
         } catch (error) {
             throw new TaskNotCreated(`Error creating task`);
         }
