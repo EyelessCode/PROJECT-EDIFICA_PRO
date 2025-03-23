@@ -1,6 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 import { TaskModel } from "../../domain/model/task.model";
-import { TaskNotCreated } from "../../domain/util/handleError.util";
+import { TaskNotCreatedError } from "../../domain/util/handleError.util";
 import { TaskMapper } from "./mapper/taskModel.mapper";
 
 export class CreateRepositoryTask{
@@ -15,12 +15,12 @@ export class CreateRepositoryTask{
             });
 
             if (!taskToCreate) {
-                throw new TaskNotCreated(`it can't create a task`)
+                throw new TaskNotCreatedError(`it can't create a task`)
             }
             
             return TaskMapper.toDomain(taskToCreate)
         } catch (error) {
-            throw new TaskNotCreated(`Error creating task`);
+            throw new TaskNotCreatedError(`Error creating task`);
         }
     }
 }
