@@ -9,13 +9,13 @@ export class TaskNotFoundError extends Error{
     }
 }
 
-export class TaskNotCreated extends Error{
+export class TaskNotCreatedError extends Error{
     statusCode:number
 
     constructor(message:string){
         super(message)
         this.name="TaskNotCreated"
         this.statusCode=404
-        Object.setPrototypeOf(this,TaskNotCreated.prototype)
+        Object.setPrototypeOf(this,TaskNotCreatedError.prototype)
     }
 }
