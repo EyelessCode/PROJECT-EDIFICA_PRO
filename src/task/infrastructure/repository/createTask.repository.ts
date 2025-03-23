@@ -14,6 +14,10 @@ export class CreateRepositoryTask{
                 data:object
             });
 
+            if (!taskToCreate) {
+                throw new TaskNotCreated(`it can't create a task`)
+            }
+            
             return TaskMapper.toDomain(taskToCreate)
         } catch (error) {
             throw new TaskNotCreated(`Error creating task`);
