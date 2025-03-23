@@ -17,12 +17,16 @@ export class GetOneRepositoryTask{
             })
     
             if (!task) {
-                return null
+                throw new TaskNotFoundError(`Task with id ${id.value} not found`);
             }
     
             return TaskMapper.toDomain(task);
         } catch (error) {
-            throw new TaskNotFoundError(`Task with id ${id.value} not found`);
+            if (error instanceof TaskNotFoundError) {
+                console.error(error.message);
+            }
+
+            throw null
         }
     }
 }
