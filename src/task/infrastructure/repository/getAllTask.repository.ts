@@ -11,7 +11,7 @@ export class GetAllRepositoryTasks{
             const tasks=await this.prisma.task.findMany()
             return tasks.map((task)=>TaskMapper.toDomain(task))
         } catch (error) {
-            throw new TaskNotFoundError(`Tasks not found!`)
+                throw new TaskNotFoundError("There's no exist tasks!")
         }
     }
 }
