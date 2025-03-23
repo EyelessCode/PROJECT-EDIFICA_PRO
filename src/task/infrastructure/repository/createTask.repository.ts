@@ -13,10 +13,6 @@ export class CreateRepositoryTask{
             const taskToCreate=await this.prisma.task.create({
                 data:object
             });
-
-            if (!taskToCreate) {
-                throw new TaskNotCreatedError(`it can't create a task`)
-            }
             
             return TaskMapper.toDomain(taskToCreate)
         } catch (error) {
